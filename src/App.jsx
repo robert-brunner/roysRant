@@ -11,7 +11,7 @@ export default function App() {
             
             {/* LOGO / TITLE */}
             <div className="text-2xl font-bold tracking-wide">
-              RoysRant
+              Bob's Rant
             </div>
 
             {/* NAV LINKS */}
@@ -51,7 +51,7 @@ export default function App() {
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight">
-              RoysRant
+              Bob's Rant
             </h1>
 
             <p className="mt-6 text-zinc-400 text-lg leading-relaxed">
@@ -112,7 +112,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="border-t border-zinc-800 py-8 px-4">
         <div className="max-w-7xl mx-auto text-zinc-500 text-sm">
-          © 2026 RoysRant
+          © 2026 Bob's Rant
         </div>
       </footer>
 
