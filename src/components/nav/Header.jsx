@@ -1,69 +1,106 @@
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarCollapse,
-  NavbarLink,
-  NavbarToggle,
-  Dropdown,
-} from "flowbite-react";
-
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+const navLinkStyle =
+  "uppercase tracking-[0.18em] text-[14px] text-[#1f2937] hover:text-black transition-colors duration-200 md:p-0";
 
 const NavigationBar = () => {
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
 
-    <Navbar fluid rounded>
+    <nav className="w-full border-b border-gray-200 bg-[#f8f8f8]">
 
-      <NavbarBrand as={Link} to="/">
-        Roy's Rant
-      </NavbarBrand>
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-5">
 
-      <NavbarToggle />
-
-      <NavbarCollapse>
-
-        <NavbarLink as={Link} to="/">
-          HOME
-        </NavbarLink>
-
-        <Dropdown
-          inline
-          label="HEALTH & NUTRITION"
+        {/* MOBILE BUTTON */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none"
         >
 
-          <Dropdown.Item as={Link} to="/nutrition-essentials">
-            NUTRITION ESSENTIALS
-          </Dropdown.Item>
+          <span className="sr-only">
+            Open main menu
+          </span>
 
-          <Dropdown.Item as={Link} to="/cancer">
-            CANCER
-          </Dropdown.Item>
+          <svg
+            className="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
 
-          <Dropdown.Item as={Link} to="/cholesterol">
-            CHOLESTEROL
-          </Dropdown.Item>
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
 
-        </Dropdown>
+          </svg>
 
-        <Dropdown
-          inline
-          label="POLITICS & ECONOMICS"
-        >
+        </button>
 
-          <Dropdown.Item as={Link} to="/economy">
-            ECONOMY
-          </Dropdown.Item>
+        {/* NAVIGATION */}
+        <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-full`}>
 
-          <Dropdown.Item as={Link} to="/debt">
-            NATIONAL DEBT
-          </Dropdown.Item>
+          <ul className="flex flex-col md:flex-row md:justify-center md:items-center gap-6 md:gap-12 mt-4 md:mt-0">
 
-        </Dropdown>
+            <li>
+              <Link
+                to="/"
+                className={navLinkStyle}
+              >
+                HOME
+              </Link>
+            </li>
 
-      </NavbarCollapse>
+            <li>
+              <Link
+                to="/covid"
+                className={navLinkStyle}
+              >
+                COVID-19 & BHT
+              </Link>
+            </li>
 
-    </Navbar>
+            <li>
+              <Link
+                to="/health"
+                className={navLinkStyle}
+              >
+                HEALTH & NUTRITION
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/politics"
+                className={navLinkStyle}
+              >
+                POLITICS & ECONOMICS
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/more"
+                className={navLinkStyle}
+              >
+                MORE
+              </Link>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
 
   );
 };
