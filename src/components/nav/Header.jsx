@@ -62,6 +62,10 @@ const healthLinks = [
     to: "/vitamin-supplements",
     label: "VITAMIN SUPPLEMENTS",
   },
+    {
+    to: "/being-gay",
+    label: "BEING GAY",
+  },
 ];
 const geopoliticalLinks = [
   {
@@ -108,14 +112,10 @@ const moreLinks = [
     label: "EARLY CHILDHOOD EDUCATION",
   },
   {
-    to: "/being-gay",
-    label: "BEING GAY",
-  },
-  {
     to: "/anti-us-globalization",
     label: "ANTI-U.S. GLOBALIZATION",
   },
-    {
+  {
     to: "/solutions-references",
     label: "SOLUTIONS & REFERENCES",
   },
@@ -208,6 +208,8 @@ const NavigationBar = () => {
               />
             </svg>
           </button>
+
+          
 
           {/* NAVIGATION */}
           <div className={`${isOpen ? "block" : "hidden"} w-full md:block`}>
@@ -333,8 +335,8 @@ const NavigationBar = () => {
         </div>
       </nav>
 
-      <div className="flex justify-center py-8">
-        <h1 className="text-[56px] font-medium uppercase tracking-wide">
+      <div className="hidden md:flex justify-center py-8">
+        <h1 className="text-[36px] lg:text-[56px] font-medium uppercase tracking-wide">
           <span
             className={
               isHealthPage
