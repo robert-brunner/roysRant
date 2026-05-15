@@ -12,6 +12,7 @@
   "dependencies": {
     "flowbite": "^4.0.1",
     "flowbite-react": "^0.12.17",
+    "linkify-react": "^4.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.15.0"
