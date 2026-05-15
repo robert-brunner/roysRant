@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import "../../App.css";
 
 const navLinkStyle =
   "uppercase tracking-[0.18em] text-[14px] text-[#1f2937] hover:text-black transition-colors duration-200";
@@ -180,10 +181,14 @@ const NavigationBar = () => {
 
   return (
     <>
-      <nav
-        ref={navRef}
-        className="w-full border-b border-gray-200 bg-[#f8f8f8]"
-      >
+<nav
+  ref={navRef}
+  className="relative w-screen left-1/2 -translate-x-1/2 
+             border-b border-gray-200 
+             bg-[linear-gradient(to_right,transparent_0%,#f8f8f8_6%,#f8f8f8_94%,transparent_100%)]
+             before:absolute before:bottom-0 before:left-0 before:right-0 before:h-px
+             before:bg-[linear-gradient(to_right,transparent_0%,#e5e7eb_6%,#e5e7eb_94%,transparent_100%)]"
+>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-5">
           {/* MOBILE BUTTON */}
           <button
@@ -334,20 +339,20 @@ const NavigationBar = () => {
           </div>
         </div>
       </nav>
-
-      <div className="hidden md:flex justify-center py-8">
-<h1 className="text-[56px] md:text-[42px] xl:text-[56px] font-medium uppercase tracking-wide">
+<div className="absolute right-4 top-2 md:static md:flex md:justify-center md:py-8">
+  <h1 className="text-[20px] leading-[1.6] md:text-[42px] xl:text-[56px] font-medium uppercase tracking-wide">
           <span
             className={
               isHealthPage
                 ? "text-[#2563eb] [text-shadow:1px_0_0_#2563eb,-1px_0_0_#2563eb,0_1px_0_#2563eb,0_-1px_0_#2563eb bg-cover bg-center [-webkit-text-stroke:1px_black]"
-                : "text-black"
+                : "text-black NO"
             }
           >
             HEALTH
           </span>
 
-          {" - "}
+         <span className="hidden md:inline">{" - "}</span>
+<span className="md:hidden">&nbsp;</span>
 
           <span
             className={
@@ -359,7 +364,8 @@ const NavigationBar = () => {
             FREEDOM
           </span>
 
-          {" - "}
+                  <span className="hidden md:inline">{" - "}</span>
+<span className="md:hidden">&nbsp;</span>
 
           <span
             className={
