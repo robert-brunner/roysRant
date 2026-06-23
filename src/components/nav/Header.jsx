@@ -340,7 +340,7 @@ const NavigationBar = () => {
         </div>
       </nav>
 <div className="absolute right-4 top-2 md:static md:flex md:justify-center md:py-8">
-  <h1 className="text-[20px] leading-[1.6] md:text-[42px] xl:text-[56px] font-medium uppercase tracking-wide">
+  <h1 className="text-[20px] leading-[1.6] md:text-[42px] xl:text-[56px] font-bold uppercase  tracking-wide">
           <span
             className={
               isHealthPage
