@@ -53,7 +53,7 @@ const healthLinks = [
   },
   {
     to: "/parkinsons-disease",
-    label: "PARKENSON'S DISEASE",
+    label: "PARKINSON'S DISEASE",
   },
   {
     to: "/medical-care-cost",
