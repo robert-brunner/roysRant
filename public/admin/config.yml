@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: robert-brunner/roysRant
+  branch: Decap
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: articles
+    label: Articles
+    files:
+    
+      - name: articles
+        label: All Articles
+        file: src/components/method2/articles.json
+        fields:
+          - label: Articles
+            name: articles
+            widget: list
+            fields:
+              - { label: Slug, name: slug, widget: string, hint: "URL path e.g. joint-health → roysrant.com/joint-health" }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string, required: false }
+              - label: Category
+                name: category
+                widget: select
+                options:
+                  - { label: "Health & Nutrition", value: health }
+                  - { label: "Politics & Economics", value: politics }
+                  - { label: More, value: more }
+              - { label: Body, name: body, widget: text }
