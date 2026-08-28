@@ -11,23 +11,31 @@ public_folder: /images
 collections:
   - name: articles
     label: Articles
-    files:
-      - name: articles
-        label: All Articles
-        file: src/components/method2/articles.json
-        fields:
-          - label: Articles
-            name: articles
-            widget: list
-            fields:
-              - { label: Slug, name: slug, widget: string, hint: "URL path e.g. joint-health becomes roysrant.com/joint-health" }
-              - { label: Title, name: title, widget: string }
-              - { label: Subtitle, name: subtitle, widget: string, required: false }
-              - label: Category
-                name: category
-                widget: select
-                options:
-                  - { label: "Health & Nutrition", value: health }
-                  - { label: "Politics & Economics", value: politics }
-                  - { label: More, value: more }
-              - { label: Body, name: body, widget: tiptap }
+    label_singular: Article
+    folder: src/components/method2/articles
+    extension: json
+    format: json
+    create: true
+    delete: false
+    identifier_field: title
+    summary: "{{title}} — /{{slug}}"
+    slug: "{{fields.slug}}"
+    preview_path: "{{slug}}"
+    fields:
+      - label: Page Address
+        name: slug
+        widget: string
+        hint: "Example: joint-health creates roysrant.com/joint-health"
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Use lowercase letters, numbers, and hyphens only."
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: "Health & Nutrition", value: health }
+          - { label: "Politics & Economics", value: politics }
+          - { label: More, value: more }
+      - { label: Body, name: body, widget: tiptap }
