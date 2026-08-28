@@ -30,4 +30,4 @@ collections:
                   - { label: "Health & Nutrition", value: health }
                   - { label: "Politics & Economics", value: politics }
                   - { label: More, value: more }
-              - { label: Body, name: body, widget: text }
+              - { label: Body, name: body, widget: tiptap }
