@@ -15,7 +15,7 @@ const Home = () => {
     <div className="max-w-4xl mx-auto px-6 py-16">
       {/* ── YouTube Channel ── */}
       <section className="mt-10 mb-12 p-6 bg-gray-50 rounded-xl border border-gray-200">
-        <h2 className="text-2xl font-bold mb-4">My YouTube Channel</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">My YouTube Channel</h2>
 
         <a
           href="https://www.youtube.com/channel/UCPj87XcaECEry5tJ8LONJzg"
@@ -69,7 +69,7 @@ const Home = () => {
 
       {/* ── Introduction ── */}
       <article className="text-[19px] leading-[1.85] text-gray-700 space-y-6">
-        <h2 className="text-3xl font-bold text-gray-900">Introduction</h2>
+        <h2 className="text-3xl font-bold text-gray-900 text-center">Introduction</h2>
 
         <p>
           I put Health and Nutrition first because that is an area over which
@@ -219,7 +219,7 @@ const Home = () => {
           surgery in 1962? See a copy of that bill.
         </p>
 
-        <h2 className="text-3xl font-bold text-gray-900 pt-4">
+        <h2 className="text-3xl font-bold text-gray-900 pt-4 text-center">
           Politics and Economics
         </h2>
 
