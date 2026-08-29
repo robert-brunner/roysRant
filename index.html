@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roy's Rant</title>
   </head>
-<body>
-  <script>
-    window.CMS_MANUAL_INIT = true;
-  </script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
 
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-  <script src="/admin/tiptap-widget.js"></script>
+    <script src="/admin/tiptap-widget.js"></script>
 
-  <script>
-    window.initCMS();
-  </script>
-</body>
+    <script>
+      window.initCMS();
+    </script>
+  </body>
 </html>

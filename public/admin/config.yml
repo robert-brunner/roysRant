@@ -35,6 +35,7 @@ collections:
         name: category
         widget: select
         options:
+          - { label: "COVID-19 & BHT", value: covid }
           - { label: "Health & Nutrition", value: health }
           - { label: "Politics & Economics", value: politics }
           - { label: More, value: more }
